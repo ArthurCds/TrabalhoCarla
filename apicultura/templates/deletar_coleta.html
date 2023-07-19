@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Deletar Coleta{% endblock %}
+
+{% block content %}
+  <h1>Deletar Coleta</h1>
+  <p>Tem certeza de que deseja deletar a coleta?</p>
+  <p><strong>Raça:</strong> {{ coleta.raca }}</p>
+  <p><strong>Data:</strong> {{ coleta.data }}</p>
+  <p><strong>Quantidade:</strong> {{ coleta.quantidade }}</p>
+
+  <form method="POST" action="{% url 'deletar_coleta' coleta.id %}">
+    {% csrf_token %}
+    <button type="submit">Deletar</button>
+  </form>
+{% endblock %}

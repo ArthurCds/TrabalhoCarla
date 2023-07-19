@@ -1,0 +1,9 @@
+<!-- coleta_create.html -->
+
+<h1>Criar Coleta</h1>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Criar</button>
+</form>

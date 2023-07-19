@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Relatório de Coleta</title>
+</head>
+<body>
+    <h1>Relatório de Coleta</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Quantidade</th>
+                <!-- Outras colunas do relatório -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for coleta in coletas %}
+            <tr>
+                <td>{{ coleta.data }}</td>
+                <td>{{ coleta.quantidade }}</td>
+                <!-- Renderizar outras informações da coleta -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Criar Coleta</h1>
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Criar</button>
+</form>
+{% endblock %}
+<!-- criar_coleta.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Criar Coleta</title>
+</head>
+<body>
+    <h1>Criar Coleta</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>

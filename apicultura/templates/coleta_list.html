@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Coletas</title>
+</head>
+<body>
+    <h1>Lista de Coletas</h1>
+    <ul>
+        {% for coleta in coletas %}
+            <li>Raça: {{ coleta.criacao.raca }}, Data: {{ coleta.data }}, Quantidade: {{ coleta.quantidade }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

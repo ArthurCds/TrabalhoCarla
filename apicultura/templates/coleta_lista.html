@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Coletas</title>
+</head>
+<body>
+    <h1>Lista de Coletas</h1>
+    {% if coletas %}
+        <ul>
+            {% for coleta in coletas %}
+                <li>{{ coleta }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nenhuma coleta encontrada.</p>
+    {% endif %}
+</body>
+</html>
